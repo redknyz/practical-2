@@ -23,8 +23,8 @@ public class Main {
         List<ChemicalSample> samples = sampleRepository.getAllSamples();
 
         for (ChemicalSample sample: samples) {
-            System.out.println(sample.getName() + " Попытка "+sample.getQuantity() );
             System.out.println();
+            System.out.println(sample.getName() + " Попытка "+sample.getQuantity() );
         }
         sampleRepository.closeEntityManager();
     }

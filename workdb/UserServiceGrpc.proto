@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package com.mypackage.grpc;
+
+option java_multiple_files = true;
+option java_package = "com.mypackage.grpc";
+option java_outer_classname = "UserServiceProto";
+
+import "google/protobuf/empty.proto";
+
+message User {
+  int32 id = 1;
+  string name = 2;
+  int32 members = 3;
+  int32 age = 4;
+}
+
+message UserList {
+  repeated User users = 1;
+}
+
+service UserService {
+  rpc getAllUsers (google.protobuf.Empty) returns (UserList);
+  // Добавьте здесь остальные методы (Create, Delete, Update).
+}
