@@ -22,9 +22,9 @@ message UserList {
 service UserService {
   rpc getAllUsers (google.protobuf.Empty) returns (UserList);
 
-   rpc createUser (User) returns (User) {}
+ //  rpc createUser (User) returns (User) {}
 
-   rpc deleteUser (User) returns (google.protobuf.Empty) {}
+ //  rpc deleteUser (User) returns (google.protobuf.Empty) {}
 
-   rpc updateUser (User) returns (User) {}
+ //  rpc updateUser (User) returns (User) {}
 }
